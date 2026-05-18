@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\Nurzhanov A\\\\homepage\\\\homepage\\\\homepage\" -Recurse)",
+      "Bash(Select-Object FullName)",
+      "Bash(npx shadcn@latest add input select sheet dialog label separator --yes)",
+      "Bash(npx tsc *)",
+      "Bash(npm run *)"
+    ]
+  }
+}

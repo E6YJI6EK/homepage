@@ -1,23 +1,21 @@
-import { useState } from "react"
-import { IconSettings } from "@tabler/icons-react"
-import { Button } from "@/components/ui/button"
-import { SearchBar } from "@/components/SearchBar"
-import { QuickLinks } from "@/components/QuickLinks"
 import { CalendarFrame } from "@/components/CalendarFrame"
+import { QuickLinks } from "@/components/QuickLinks"
+import { SearchBar } from "@/components/SearchBar"
 import { SettingsSheet } from "@/components/SettingsSheet"
-import { useSearchEngine } from "@/hooks/useSearchEngine"
+import { Button } from "@/components/ui/button"
 import { useQuickLinks } from "@/hooks/useQuickLinks"
+import { IconSettings } from "@tabler/icons-react"
+import { useState } from "react"
 
 export function App() {
-  const [engineKey, setEngineKey] = useSearchEngine()
   const { links, addLink, removeLink } = useQuickLinks()
   const [settingsOpen, setSettingsOpen] = useState(false)
 
   return (
-    <div className="flex flex-col h-screen overflow-hidden bg-background text-foreground">
-      <div className="flex items-center gap-2 p-3 shrink-0">
-        <div className="flex-1 flex justify-center">
-          <SearchBar engineKey={engineKey} onEngineChange={setEngineKey} />
+    <div className="flex h-screen flex-col overflow-hidden bg-background text-foreground">
+      <div className="flex shrink-0 items-center gap-2 p-3">
+        <div className="flex flex-1 justify-center">
+          <SearchBar />
         </div>
         <Button
           variant="ghost"
@@ -29,8 +27,11 @@ export function App() {
         </Button>
       </div>
 
-      <div className="shrink-0 px-3 pb-2">
-        <QuickLinks links={links} onOpenSettings={() => setSettingsOpen(true)} />
+      <div className="flex shrink-0 justify-center px-3 pb-2">
+        <QuickLinks
+          links={links}
+          onOpenSettings={() => setSettingsOpen(true)}
+        />
       </div>
 
       <CalendarFrame />

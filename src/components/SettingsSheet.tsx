@@ -26,7 +26,7 @@ export function SettingsSheet({
 }: SettingsSheetProps) {
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
-      <SheetContent side="right" className="w-[380px] flex flex-col gap-6 overflow-y-auto">
+      <SheetContent side="right" className="w-95 flex flex-col gap-6 overflow-y-auto pl-3.5">
         <SheetHeader>
           <SheetTitle>Settings</SheetTitle>
         </SheetHeader>

@@ -1,11 +1,11 @@
 import { CalendarFrame } from "@/components/CalendarFrame"
 import { QuickLinks } from "@/components/QuickLinks"
-import { SearchBar } from "@/components/SearchBar"
 import { SettingsSheet } from "@/components/SettingsSheet"
 import { Button } from "@/components/ui/button"
 import { useQuickLinks } from "@/hooks/useQuickLinks"
 import { IconSettings } from "@tabler/icons-react"
 import { useState } from "react"
+import { SearchBar } from "./blocks/search-bar"
 
 export function App() {
   const { links, addLink, removeLink } = useQuickLinks()

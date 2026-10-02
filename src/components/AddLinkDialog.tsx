@@ -34,7 +34,7 @@ export function AddLinkDialog({ open, onOpenChange, onAdd }: AddLinkDialogProps)
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[400px]">
+      <DialogContent className="sm:max-w-100">
         <DialogHeader>
           <DialogTitle>Add Link</DialogTitle>
         </DialogHeader>

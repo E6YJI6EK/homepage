@@ -18,7 +18,7 @@ export function LinkManager({ links, addLink, removeLink }: LinkManagerProps) {
       {links.map((link) => (
         <div key={link.id} className="flex items-center justify-between gap-2 py-1">
           <span className="text-sm truncate flex-1">{link.label}</span>
-          <span className="text-xs text-muted-foreground truncate max-w-[140px]">{link.url}</span>
+          <span className="text-xs text-muted-foreground truncate max-w-35">{link.url}</span>
           <Button
             variant="ghost"
             size="icon"
